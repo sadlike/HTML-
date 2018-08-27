@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单综合练习</title>
+</head>
+<body>
+<form action="">
+    <fieldset>
+        <legend>注册界面</legend>
+    <p>
+        <label for="account"> 账号:<input type="text" id="account">
+    </p>
+    <p>
+        密码:<input type="password">
+    </p>
+    <p>
+        性别:
+        <input type="radio" name="gender" value="1">男
+        <input type="radio" name="gender" value="0">女
+        <input type="radio" name="gender" checked ="checked"value="2">保密
+    </p>
+    <p>
+        爱好:
+        <input type="checkbox" name="fav" value="1">篮球
+        <input type="checkbox" name="fav" value="2">足球
+        <input type="checkbox" name="fav" checked ="checked" value="3">排球
+    </p>
+    <p>
+      个人简介:<textarea cols="30" rows="10"></textarea>
+    </p>
+    <p>
+        生日:<input type="date">
+    </p>
+    <p>
+       邮箱:<input type="email">
+    </p>
+    <p>
+        手机:<input type="number">
+    </p>
+    <p>
+        生日:<input type="date">
+    </p>
+    <p>
+        <input type="submit" value="注册">&nbsp
+
+        <input type="reset" value="清空">
+    </p>
+
+    </fieldset>
+</form>
+<!--
+1、详情和概要标签
+作用： 利用summary标签来描述概要信息，利用details标签来描述详情信息
+默认情况下是折叠显示.
+
+格式
+<details>
+    <summary> 概要信息</summary>
+    详情信息
+</details>
+-->
+<details>
+    <summary> abcasd</summary>
+    详情信息adjlkajdfladfladsfalksj了思考戴假发旅客说道发牢骚的啊速度快放假按理说打飞机埃里克束带结发lkjdflak
+</details>
+
+<!--
+marquee 标签
+作用：跑马灯效果
+<marquee behavior="" direction="">
+    内容
+</marquee>
+direction 设置滚动方向 left/right/up/down
+scrollamount;设置滚动速度  值越大速度越快
+loop 滚动次数
+behavior ；滚动类型 slide 滚动到边界就停止；alternate 滚动到边界就弹回
+注意：
+ marquee标签不是w3c推荐的标签 但是各大浏览器对这个标签支持的非常好。
+-->
+
+
+</body>
+<marquee behavior="" direction="right">
+    内容随便写点
+</marquee>
+<marquee behavior="" direction="up">
+    内容随便写点
+</marquee>
+<marquee behavior="" direction="down">
+    内容随便写点
+</marquee>
+<br>
+<!--滚动速度-->
+<marquee scrollamount="1">abc</marquee>
+<marquee scrollamount="100">速度100</marquee>
+
+<!--滚动次数-->
+<marquee loop="1">速度100</marquee>
+
+<!--滚动类型-->
+<marquee behavior="alternate">弹回</marquee>
+<marquee behavior="slide" >不回</marquee>
+
+<marquee behavior="" direction="">
+    <img src="danbaoshibai_img@3x.png">
+</marquee>
+
+<!--
+html中的标签只有一个作用，就是用来添加语义
+<br> 换行
+<hr> 分割线
+<font>
+    <b></b>  bold 加粗文本
+    <u></u>   underlinde  给文本添加下划线
+    <i></i>  italie    将文本倾斜
+    <s></s>  strikethough  给文本添加删除线。
+
+    没有语义 都是用来修改样式
+
+ 不到万不得已 一定不要用这些标签。
+
+
+ 如果一定要用 一般情况下作用css的钩子使用。
+
+
+ 替代
+ strong  ------           b   定义重要性强调的问题
+ ins   （inseted）        u    定义 插入的文字
+ em    （emphasized）     i   定义强调的文字
+ del     （deleted）      s    定义被删除的文字
+-->
+
+<br> 换行
+<hr> 分割线
+<font>
+    <b>加粗</b>
+    <u>下划线</u>
+    <i>倾斜</i>
+    <s>删除线</s>
+
+    <br>
+
+    <strong>我是文字</strong>
+    <ins>我是文字</ins>
+    <em>我是文字</em>
+    <del>我是文字</del>
+
+
+
+    <!--字符实体
+    1、在html中对空格、回车、tabl不敏感 会把多个空格、回车、tab当做一个空格来处理
+    2、
+
+      什么是字符实体
+      在html中有的字符是被html保留的，有的html字符在html中是有特殊含义的 是不能在浏览器中直接显示出来的
+      &nbsp;  空格
+      &lt; 小于符号
+      &gt;大于符号
+      &copy 版权符号
+
+    -->
+
+    <p> 我&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;爱你</p>
+    <p>刀子html的基础标签完毕，学习了&lt;h1&gt;标签,&lt;table&gt;标签   &copy;</p>
+
+</html>

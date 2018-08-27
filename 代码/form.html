@@ -112,11 +112,52 @@ input 标签 input标签有个type属性  type类型不同功能不同
 
 
 
+<!--
+1、select标签
+定义下拉列表
+格式
+<select name="" id="">
+  <optgroup label = "分组名称">
+      <option> 列表数据</option>
+    </optgroup>
+</select>
+注意：1、下拉列表不能输入内容 但是可以选择内容
+2、可以通过option标签添加一个selected属性来个默认值
+3 可以通过option标签包裹一层optgroup标签来给下拉列表中的数据分类
 
+-->
 
+<select>
 
+    <optgroup label="北京">
+        <option value="">朝阳区</option>
+        <option value="">昌平区</option>
+        <option value="">通州区</option>
+    </optgroup>
+    <optgroup label="广州">
+        <option value="">朝阳1区</option>
+        <option value="">昌平1区</option>
+        <option value="">通州1区</option>
+    </optgroup>
 
+    <option value="" selected="selected"> 武汉</option>
+    <option value=""> A</option>
+    <option value=""> B</option>
+    <option value=""> C</option>
+</select>
+<!--textarea标签
+定义多行输入
+<textarea>
 
+</textarea>
+注意：1默认情况下输入框可以无限换行
+2 默认情况下输入框有自己的宽度和高度
+3 cols列数 rows行数
+4 可以自己扩展拉伸
+-cols列数 rows行数-->
+<textarea cols="2" rows="5">
+
+</textarea>
 
 </body>
 </html>
