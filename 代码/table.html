@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<!---表格标签--
+1、用来给一堆数据添加表格语义
+一种数据的展现方式，当数据量非常大的时候 表格这种展现方式被认为是最为清晰的一种你占线形式
+2、表格标签格式
+<table>
+  <tr>
+    <td>需要显示的内容</td>
+   </tr>
+</table>
+table 代表着整个表情哥，也就是一堆table标签就是一个表格
+其实表格标签中的tr标签代表整个表格中的一行数据  也就是说一对tr标签就是表格中的一行
+
+其实表格标签中的td标签代表表格中的一行中的一个单元格
+3 注意
+  1表格标签有个边框属性 这个属性决定了 边框的宽度 默认情况下这个属性的值为0 所以看不到边框。
+  2表格标签和列表标签一样 它是一个组合标签随意talbe/tr/td 要么一起出现要么一起不出现 不会单个出现。
+
+
+  1、宽度和高度 可以给table和td标签使用
+   表格的宽度和高度默认是按照内容尺寸调整的
+   也可以给table标签设置width和height属性来手动指定
+   如果td标签设置width和height属性会修改单元格高度但不会影响整个表格的宽度和高度
+
+  2、水平对齐和垂直对齐的属性
+   水平 table 和td tr 标签使用   align 水平属性
+   垂直对齐只能给tr标签和td标签使用
+   如果td中设置了align 属性tr中也设置了align属性那么会按照td中的设置来对齐
+   3、外边距和内边距的属性
+    只能给table标签使用
+    外边距就是单元格与单元格之间的距离，我们称之为外边距。默认情况下单元格和单元格之间的外边距的距离是2px
+    内边距就是单元格的边框和文字之间的间隙，
+默认情况下内边距是1
+
+以后都在css中修改。
+
+--->
+<!-----2行三列-->
+<table border="1" width="500px" height = @"200px" align="center"
+cellspacing="12px" cellpadding="1">
+
+    <tr valign="top">
+        <td width="150px" height="50px">1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr align="center">
+        <td align="right">2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+</table>
+<br>
+<br>
+
+<!----细线边框---
+1\table 标签设置bgcolor
+2、tr标签设置bgcolor
+2给table标签设置cellspacing = '1px'
+
+注意点
+table标签和tr td 都支持bgcolor
+-->
+<table  width="500px" height = @"200px" align="center"
+       bgcolor="black" cellspacing="1px"  >
+    <tr valign="top" bgcolor="white">
+        <td width="150px" height="50px">1.1</td>
+        <td>1.2</td>
+        <td>1.3</td>
+    </tr>
+    <tr align="center" bgcolor="white">
+        <td align="right">2.1</td>
+        <td>2.2</td>
+        <td>2.3</td>
+    </tr>
+</table>
+<!-----
+1\表格标题
+表格标签中 提供了一个标签专门用来设置表格的标题 caption
+caption 一定要写在table标签中 否则不小
+caption 一定要赶紧跟在table标签后面
+在表格标签中提供了一个标签专门用来存储每一列标题，这个标签叫做th标签 只要将当前列的标题存储在这个标签中就会自动居中+加粗文字
+td 专门用来存储数据  th 专门用来存储标题的
+-->
+
+<table  bgcolor="black" cellspacing="1px">
+    <caption>
+        <h2>今日小说排行榜</h2>
+    </caption>
+    <tr bgcolor="#696969" align="center">
+
+        <th>排名</th>
+        <th>关键词</th>
+        <th>趋势</th>
+        <th>今日搜索</th>
+        <th>最近七日</th>
+        <th>相关链接</th>
+    </tr>
+    <tr bgcolor="white" align="center">
+        <td>1</td>
+        <td align="left">暴走大事件</td>
+        <td><img src="danbaoshibai_img@3x.png" width="10px" height="10px" ></td>
+        <td>123123123</td>
+        <td>1231231</td>
+        <td>
+            <a href="https://www.baidu.com">百度</a>
+            <a href="https://www.baidu.com">贴吧</a>
+            <a href="https://www.baidu.com">图片</a>
+        </td>
+    </tr>
+    <tr bgcolor="white">
+        <td>排名</td>
+        <td>关键词</td>
+        <td>趋势</td>
+        <td>今日搜索</td>
+        <td>最近七日</td>
+        <td>相关链接</td>
+    </tr>
+    <tr bgcolor="white">
+        <td>排名</td>
+        <td>关键词</td>
+        <td>趋势</td>
+        <td>今日搜索</td>
+        <td>最近七日</td>
+        <td>相关链接</td>
+    </tr>
+    <tr bgcolor="white">
+        <td>排名</td>
+        <td>关键词</td>
+        <td>趋势</td>
+        <td>今日搜索</td>
+        <td>最近七日</td>
+        <td>相关链接</td>
+    </tr>
+    <tr bgcolor="white">
+        <td>排名</td>
+        <td>关键词</td>
+        <td>趋势</td>
+        <td>今日搜索</td>
+        <td>最近七日</td>
+        <td>相关链接</td>
+    </tr>
+</table>
+
+
+<!---
+表格中存储的数据可分为4类
+1表格的标题
+2表格的标头信息
+3表格的主体信息
+4表格的页尾信息
+
+2、表格的完整结构
+<table>
+    <caption> 表格的标题</caption>      指定表格的标题
+    <thead>
+      <tr>
+        <th>每一列的标题</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>数据</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td>页尾数据</td>
+        </tr>
+    </tfoot>
+</table>
+caption  指定表格的标题
+thead   指定表格的标头信息
+tbody  指定表格的主题信息
+tfoot  指定表格的附加信息
+如果我们没有编写tbody 系统会自动给我们添加tbody
+如果指定了thead和tfoot 那么在修改整个表格的高度时，thead和tfoot有自己默认的高度不会随着表格的高度变化而变化
+------>
+<!--
+单元格合并
+1、水平方向上的单元格合并  <td colspan="2"></td>
+可以给td标签添加一个colspan属性，来指定把某个单元格当做多个单元格来看待
+
+注意： 由于把某个单元格当成多个单元格，所以就会多出一些单元格，要删掉一些单元格才能正常显示
+  一定要记住单元格合并永远都是向后或者向下合并
+2、垂直方向上的单元格合并  <td rowspan="2"></td>
+rowspan  属性
+-->
+<br>
+
+<table bgcolor="black" width="500px" height ="300px" align="center">
+<caption>合并单元格</caption>
+    <tr bgcolor="white">
+        <td colspan="2"></td>
+        <!--<td></td>-->
+        <td rowspan="2"></td>
+    </tr>
+    <tr bgcolor="white">
+        <td></td>
+        <td></td>
+        <!--<td></td>-->
+    </tr>
+    <tr bgcolor="white">
+        <td></td>
+        <td colspan="2"></td>
+        <!--<td></td>-->
+    </tr>
+
+</table>
+</body>
+</html>
