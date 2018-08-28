@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1caf7c-51b7-402c-b411-6c5f88d885e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/代码/百度首页练习.html" afterPath="$PROJECT_DIR$/代码/百度首页练习.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -89,8 +89,8 @@
       <file leaf-file-name="百度首页练习.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/代码/百度首页练习.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+            <state relative-caret-position="497">
+              <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -151,8 +151,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="176" />
-    <option name="y" value="308" />
+    <option name="x" value="727" />
+    <option name="y" value="23" />
     <option name="width" value="1106" />
     <option name="height" value="716" />
   </component>
@@ -228,6 +228,11 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///Users/wwp/HTML-/代码/list.html" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/代码/images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -321,15 +326,15 @@
       <updated>1535095265844</updated>
       <workItem from="1535095267054" duration="3256000" />
       <workItem from="1535332500007" duration="20135000" />
-      <workItem from="1535417930852" duration="9930000" />
+      <workItem from="1535417930852" duration="13681000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33321000" />
+    <option name="totallyTimeSpent" value="37072000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="176" y="308" width="1106" height="716" extended-state="0" />
+    <frame x="727" y="23" width="1106" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24976958" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -374,16 +379,16 @@
         <state relative-caret-position="1080">
           <caret line="72" column="10" lean-forward="true" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
           <folding>
-            <element signature="e#2978#2984#0" expanded="true" />
-            <element signature="e#2984#2990#0" expanded="true" />
-            <element signature="e#2990#2996#0" expanded="true" />
-            <element signature="e#2996#3002#0" expanded="true" />
-            <element signature="e#3002#3008#0" expanded="true" />
-            <element signature="e#3039#3043#0" expanded="true" />
-            <element signature="e#3045#3049#0" expanded="true" />
-            <element signature="e#3052#3056#0" expanded="true" />
-            <element signature="e#3061#3065#0" expanded="true" />
-            <element signature="e#3070#3076#0" expanded="true" />
+            <element signature="e#2978#2984#0" expanded="false" />
+            <element signature="e#2984#2990#0" expanded="false" />
+            <element signature="e#2990#2996#0" expanded="false" />
+            <element signature="e#2996#3002#0" expanded="false" />
+            <element signature="e#3002#3008#0" expanded="false" />
+            <element signature="e#3039#3043#0" expanded="false" />
+            <element signature="e#3045#3049#0" expanded="false" />
+            <element signature="e#3052#3056#0" expanded="false" />
+            <element signature="e#3061#3065#0" expanded="false" />
+            <element signature="e#3070#3076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -467,16 +472,16 @@
         <state relative-caret-position="-703">
           <caret line="87" column="10" lean-forward="true" selection-start-line="87" selection-start-column="10" selection-end-line="87" selection-end-column="10" />
           <folding>
-            <element signature="e#2978#2984#0" expanded="true" />
-            <element signature="e#2984#2990#0" expanded="true" />
-            <element signature="e#2990#2996#0" expanded="true" />
-            <element signature="e#2996#3002#0" expanded="true" />
-            <element signature="e#3002#3008#0" expanded="true" />
-            <element signature="e#3039#3043#0" expanded="true" />
-            <element signature="e#3045#3049#0" expanded="true" />
-            <element signature="e#3052#3056#0" expanded="true" />
-            <element signature="e#3061#3065#0" expanded="true" />
-            <element signature="e#3070#3076#0" expanded="true" />
+            <element signature="e#2978#2984#0" expanded="false" />
+            <element signature="e#2984#2990#0" expanded="false" />
+            <element signature="e#2990#2996#0" expanded="false" />
+            <element signature="e#2996#3002#0" expanded="false" />
+            <element signature="e#3002#3008#0" expanded="false" />
+            <element signature="e#3039#3043#0" expanded="false" />
+            <element signature="e#3045#3049#0" expanded="false" />
+            <element signature="e#3052#3056#0" expanded="false" />
+            <element signature="e#3061#3065#0" expanded="false" />
+            <element signature="e#3070#3076#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -554,8 +559,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/代码/百度首页练习.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        <state relative-caret-position="497">
+          <caret line="149" column="0" lean-forward="true" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
           <folding />
         </state>
       </provider>
