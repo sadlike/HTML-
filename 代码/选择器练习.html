@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器练习</title>
+    <style>
+        /*--标签选择器*/
+       p{
+           color: red;
+       }
+        /*id选择器*/
+
+        #identify1{
+            color: red;
+        }
+        #identify2{
+            color: red;
+        }
+
+        /*类选择器*/
+        .para{
+            color: red;
+        }
+        /*后代选择器*/
+        div p{
+            color: red;
+        }
+        /*子元素选择器*/
+        div>p{
+            color: red;
+        }
+        /*交集选择器*/
+        p.para{
+            color: red;
+        }
+        /*并集选择器*/
+        #identify1,#identify2{
+            color: red;
+        }
+        /*通用兄弟选择器*/
+        h1~p{
+            color: red;
+        }
+        /*序选择器*/
+        /*p:nth-child(n+1){*/
+            /*color: red;*/
+        /*}*/
+        p:nth-of-type(n+1){
+            color: red;
+        }
+        /*属性选择器*/
+        p[class]{
+            color:  red;
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+<div>
+    <h1>标题再这里</h1>
+    <p id="identify1" class="para"> 我是段落1</p>
+    <p id="identify2" class="para"> 我是段落2</p>
+
+</div>
+
+
+
+
+</body>
+</html>
