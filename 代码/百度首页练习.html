@@ -13,6 +13,7 @@
             background-color: white;
 
             /*background: ;*/
+            background-attachment:fixed;
         }
         div {
             text-align: center;
@@ -51,6 +52,9 @@
         }
         .baike{
             height: 120px;
+        }
+        .box1{
+            background-image: url("images/cai_contentA_img.png");
         }
 
     </style>
@@ -152,6 +156,45 @@ background-position 属性
 background：背景颜色 背景图片 平铺方式 关联方式 定位方式
 注意点
 background：属性中 任何一个属性都可以省略
+2、什么是背景关联方式？
+ 默认情况下背景图片会随着滚动条的滚动而滚动，如果不想让背景图片随着滚动条的滚动而滚动，
+ 那么我们就可以修改背景图片和滚动条的关联方式
+3、如何修改背景关联方式
+background-attachment：scroll；
+scroll 默认滚动而滚动
+fixed 不会随着滚动而滚动
+
 -->
+<!--
+1、背景图片和插入图片的区别
+插入图片：  <img src="images/cai_contentA_img.png" alt="">
+背景图片    background-image: url("images/cai_contentA_img.png");
+    1、1
+        背景图片仅仅是一个暂时，不会占用位置
+        插入图片会占用位置
+    1、2
+        背景图片有定位属性，所以可以很方便的控制图片的位置
+        插入图片没有定位属性，所有控制图片的位置不太方便。
+    1、3
+        插入图片的语义比北京图片你的语义要抢，所以在企业开发中如果你的图片想要被搜索殷勤收录，那么推荐使用插入图片
+-->
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+<br>
+<hr>
+<br>
+
+<div class="box1">
+    我是文字
+</div>
+<div class="box2">
+    <img src="images/cai_contentA_img.png" alt="">
+    我是文字
+
+</div>
 </body>
 </html>
