@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css盒子模型</title>
+    <style>
+        <!--清空默认边距-->
+        /**{*/
+            /*margin: 0px;*/
+            /*padding: 0px;*/
+        /*}*/
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+
+        span,a,em,strong{
+          display: inline-block;
+          width: 100px;
+            height: 100px;
+            padding: 10px;
+            border: 6px solid red;
+            margin: 20px;
+        }
+        .content{
+            height: 300px;
+            width: 300px;
+            background-color: red;
+        }
+        .aslide{
+            width: 100px;
+            height: 200px;
+            background-color: green;
+            float: left;
+        }
+        .article{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: right;
+            /*padding: 20px;*/
+
+            border: 20px solid black;
+            /*1、css3中新增了一个box-sizing属性，这个属性可以保证我们盒子新增padding和border之后
+            ，盒子元素的宽度和高度不变
+            2、boxing-sizing 属性是如何保证增加padding和border之后，盒子元素的高度和宽度不变
+                 和增加padding和border之后 想要保证盒子元素的宽高不变，那么就必须减去一部分内容的宽度和高度。
+            3、box-sizing取值
+              content-box  元素的宽高= 边框+内边距+内容宽高
+              border-box   元素的宽高= 内容width、height属性
+            */
+            box-sizing: border-box;
+        }
+        .bigBox{
+
+            background-color: red;
+
+            width: 500px;
+            height: 500px;
+            border: 1px solid #000;
+            /*
+            padding-top: 150px;
+            padding-left: 150px;
+            width: 350px;
+            height: 350px;
+
+            */
+        }
+        .smallBox{
+            width: 200px;
+            height: 200px;
+            background: black;
+            /*
+            注意点：
+            1、如果两个盒子是嵌套关系，那么设置了里面一个盒子的顶部的外边距，外面一个盒子也会被顶下来。
+            2、如果外面的盒子不想被遗弃顶下来，那么可以给外面的盒子添加边框属性即可
+            3、在企业开发中如果需要控制嵌套关系盒子之间的距离，首先应该考虑padding，其次再考虑margin
+             margin 本质上用于控制兄弟关系之间的间隙，
+            */
+            /*margin-top: 150px;*/
+            /*margin-left: 150px;*/
+
+            /*
+            注意点：
+            1、在嵌套关系的盒子中，我们可以利用margin：0 auto；的方式来让里面的盒子在外面你的盒子中水平居中
+            2、margin：0 auto； 只对水平方向有效，对垂直方向无效。
+
+            */
+            margin: 150px auto;
+        }
+        p{
+            box-sizing: border-box;
+            width: 610px;
+            height: 110px;
+            background-color: #cdcdcd;
+            border: 1px solid #000;
+            line-height: 40px;
+            font-size: 20px;
+            font-family:"黑体";
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--
+1、、、、css盒子模型
+  css盒子模型仅仅是一个形象的避雨，html中所有的标签都是盒子
+结论
+在html中所有的标签都可以设置
+   宽度/高度   == 指定可以存放内容的区域
+   内边距       填充物
+   边框         手机盒子自己
+   外边距        盒子和盒子之间的间隙
+-->
+<span>我是span</span>
+<a href="#"我是超链接>我是超链接</a>
+<em>我是倾斜</em>
+<strong>我是着重强调</strong>
+
+<div class="content">
+    <div class="aslide">
+
+    </div>
+    <div class="article">
+
+    </div>
+</div>
+
+
+
+<!--
+需求
+
+ 元素宽高 500   大盒子
+ 元素宽高 200   小盒子
+
+ 小盒子放到大盒子中，并且水平垂直居中
+-->
+<br>
+<hr>
+
+
+<div class="bigBox">
+    <div class="smallBox"></div>
+</div>
+
+<!--
+text-align： center 与margin：0 auto；的区别
+text-align： center 作用： 设置盒子中存储的文字、图片水平居中
+margin：0 auto； 作用 ：让盒子自己水平居中。
+-->
+
+<!--
+清空默认边距（外边距和内边距）
+1、为什么要清空默认边距
+在企业开发中为了更好的控制盒子的宽高和计算盒子的宽高等等，所以在企业开发中，编写代码之前的第一件事情就是清空默认的边距
+2、如何清空默认的边距
+
+    *{
+            margin: 0px;
+            padding: 0px;
+        }
+3、注意点
+通配符选择器会遍历当前界面中所有的标签，所以性能不好
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+-->
+<!--
+
+行高和盒子的高度不是一个概念
+
+ 规律
+1、 文字在行高中是 垂直居中的
+2、在企业开发中我们经常将盒子的高度和行高设置为一样，那么这样就可以保证一行文字在盒子的高度中是垂直居中的
+   简而言之：想要一行字 在盒子中垂直居中，俺么只需要设置这行文字的行高等于盒子的高即可
+3、在企业开发中如何一个盒子有多行文字，那么我们就不能使用设置行高等于盒子高来实现让文字垂直居中，
+4、在企业开发中如果一个盒子中存储的是文字，那么一般情况下我们会以盒子左边的内边距为基准，不会以右边你的内边距为基准，
+   因为右边的内边距有误差
+
+   右边的放不下文字就会换行
+5、顶部的内边距并不是边框到文字顶部的距离而是边框到行高顶部的距离
+-->
+<p>sdfjaldfaldad看附件埃里克森的驾驶的李开复加来得快放假啊了上岛咖啡敬爱的绿山咖啡那时的浪费那是的浪费你阿里山的烦恼拉水电费阿里速度快发斯蒂芬
+    
+</p>
+</body>
+</html>

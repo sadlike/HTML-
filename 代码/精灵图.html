@@ -38,6 +38,41 @@
             border-left: 2px double  magenta;
             border-right: 1px solid #000;
         }
+        .box6{
+            height: 160px;
+            width: 100px;
+            padding-top: 120px;
+            background-color: red;
+        }
+        span{
+            /*行内快*/
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            border: 2px solid black;
+        }
+        .boxaaa{
+            height: 200px;
+            border: 2px solid red;
+
+        }
+        .boxs1 {
+            margin-top: 10px;
+            margin-left: 100px;
+            margin-right: 50px;
+            margin-bottom: 40px;
+        }
+        .hz1{
+            margin-right: 100px;
+        }
+        .hz2{
+            margin-left: 50px;
+        }
+        .bdbox1{
+            border: 2px solid red;
+
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
@@ -49,7 +84,6 @@ css精灵图 是一种图像合成技术
 可以减少请求次数 以及可以降低服务器处理压力
 3、如何使用精灵图
 需要配合背景图片和背景定位来使用
-
 -->
 
 
@@ -87,9 +121,68 @@ css精灵图 是一种图像合成技术
    border-right:边框的宽度 边框的样式 边框的颜色
    border-left:边框的宽度 边框的样式 边框的颜色
    border-bottom:边框的宽度 边框的样式 边框的颜色
+  2.3连写
+  border-width:上   右   下   左
+  border-style:上   右   下   左
+  border-color:上   右   下   左
+  注意点：
+ 1、 这三个属性的取值是按照 上右下左来赋值， 顺时针
+ 2、这三个属性的取值省略时的规律
+ 省略了左 则左右颜色一样  省略了下 则上下颜色一样，省略了右下左，则所有颜色与上一样。
+3、非连写 (方向+要素)
+border-top-width
+
 -->
 
 
 
+<!--
+1、什么是内边距？
+边框和内容之间的距离就是内边距
+2、格式
+ 1\非连写
+padding-top：
+padding-right：
+padding-bottom：
+padding-left：
+注意点
+给标签设置内边距之后，标签占有的宽度和高度会发生变化
+2\
+padding:上右下左
+
+内边距也会有背景颜色
+-->
+<div class="box6">
+    埃里克的法律的开发来得快发大水了开发商的脸孔发电量了上岛咖啡阿里
+</div>
+
+
+<!--
+1、什么是外边距？
+标签与标签之间的距离就是外边距
+2、格式
+ 2.1非连写
+ margin-top：
+ margin-bottom：
+ margin-left；
+ margin-right；
+ 2.2连写
+margin：上右下左
+注意：
+外边距是没有背景颜色
+-->
+<span class="boxs1">我是span</span>
+<span class="boxs2">我是span</span>
+<span class="boxs3">我是span</span>
+<span class="boxs4">woshisapn</span>
+<div class="boxaaa"> </div>
+
+<!--
+外边距合并现象
+在默认布局的垂直方向上，默认情况下外边距是不会叠加的，会出现合并现象， 谁的外边距比较大，就听谁的！
+-->
+<span class="hz1">我是span</span><span class="hz2">我是span</span><span class="hz3">我是span</span><span class="hz4">woshisapn</span>
+<div class="bdbox1"> div div</div>
+<div class="bdbox2"> div div</div>
 </body>
 </html>

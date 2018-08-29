@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网页的布局方式</title>
+    <style>
+        div,h1,p{
+            border: 1px solid red;
+        }
+        /*水平排版*/
+        span,strong,em{
+            border: 1px solid red;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            display: inline-block;
+            float: left;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            display: inline-block;
+            float: right;
+            /*margin-left: 930px;*/
+        }
+        .bx1{
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            float: left;
+
+        }
+        .bx2{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<!--
+1、什么是网页的布局方式？
+网页的布局方式其实就是指浏览器是如何对网页中的元素进行排版的
+
+ 1、标准流（文档流、普通流）排版方式
+   1、1浏览器默认的排版方式就是标准流的排版方式
+   1、2css 中元素分为三类，块级元素/行内元素/行内块级元素
+   块级元素：独占一行   可以设置宽高
+   行内元素 、行内块级元素    不独占一行 行内元素不能设置元素
+   行内块级元素 可设置宽高
+    1、3  标准流中有2中 1、垂直排版 2、 水平排版
+    垂直排版：如果元素是快内元素，那么就会垂直排版
+    水平排版：如果元素是行内元素/行内块级元素，那么就会水平排版
+ 2、浮动流排版方式
+    2.1浮动流是一种"半脱离标准流"的排版方式
+    2.2浮动流只有一种排版方式，就是水平排版。 它只能设置某个元素左对齐或者右对齐
+
+  注意点：
+    1、浮动流中没有居中对齐，没有center属性取值
+    2、浮动流中是不可以使用margin：0 auto；的
+  特点：
+   1、在浮动流中是不区分块级元素和行内元素，行内块级元素的，
+   无论是块级元素/行内元素/行内块级元素都可以水平排版
+   2、在浮动流中无论是块级元素/行内元素/行内块级元素都可以设置宽高
+   3、综上所述，浮动流中的元素和标准流中的行内块级元素很像
+ 3、定位流排版方式
+
+-->
+<!--
+<div>我是div</div>
+<h1>我是标题</h1>
+<p>我是段落</p>
+-->
+
+<!--
+<span>我是span</span>
+<strong>我是强调</strong>
+<em>我是倾斜</em>
+-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+<!--
+1、浮动元素的脱标？
+脱标：脱离标准流
+ 当某一个元素浮动之后，那么这个元素看上去就像被从标准流中删除了一样，这个就是浮动元素脱标
+2、浮动元素拖表之后会有什么影响？
+
+如果前面一个元素浮动了，而后面一个元素没有浮动，那么这个时候前面一个元素就会盖住后面一个元素
+
+-->
+
+<br>
+<hr>
+
+<div class="bx1"></div>
+<div class="bx2"></div>
+
+</body>
+</html>
