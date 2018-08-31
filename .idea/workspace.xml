@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dc1caf7c-51b7-402c-b411-6c5f88d885e4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/代码/浮动布局练习.html" afterPath="$PROJECT_DIR$/代码/浮动布局练习.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/代码/网易注册界面.html" afterPath="$PROJECT_DIR$/代码/网易注册界面.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="网易注册界面.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/代码/网易注册界面.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1659">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="405">
+              <caret line="114" column="34" lean-forward="false" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
               <folding>
                 <element signature="e#769#1026#0" expanded="false" />
                 <element signature="e#1052#1209#0" expanded="false" />
@@ -60,17 +59,13 @@
                 <element signature="e#1636#1839#0" expanded="false" />
                 <element signature="e#1861#2050#0" expanded="false" />
                 <element signature="e#2076#2300#0" expanded="false" />
-                <element signature="e#2328#2488#0" expanded="false" />
-                <element signature="e#2516#2673#0" expanded="false" />
-                <element signature="e#2704#2846#0" expanded="false" />
-                <element signature="e#2988#3280#0" expanded="false" />
-                <element signature="e#3934#4079#0" expanded="false" />
-                <element signature="e#4135#4310#0" expanded="false" />
+                <element signature="e#2327#2487#0" expanded="false" />
+                <element signature="e#2515#2672#0" expanded="false" />
+                <element signature="e#3974#4119#0" expanded="false" />
+                <element signature="e#4175#4350#0" expanded="false" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -346,15 +341,15 @@
       <workItem from="1535417930852" duration="13843000" />
       <workItem from="1535510866721" duration="14932000" />
       <workItem from="1535593434905" duration="8268000" />
-      <workItem from="1535677298641" duration="14232000" />
+      <workItem from="1535677298641" duration="14537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74666000" />
+    <option name="totallyTimeSpent" value="74971000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="195" y="23" width="1106" height="716" extended-state="0" />
+    <frame x="195" y="23" width="1106" height="716" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700461" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -735,8 +730,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/代码/网易注册界面.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1659">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="405">
+          <caret line="114" column="34" lean-forward="false" selection-start-line="114" selection-start-column="34" selection-end-line="114" selection-end-column="34" />
           <folding>
             <element signature="e#769#1026#0" expanded="false" />
             <element signature="e#1052#1209#0" expanded="false" />
@@ -744,17 +739,13 @@
             <element signature="e#1636#1839#0" expanded="false" />
             <element signature="e#1861#2050#0" expanded="false" />
             <element signature="e#2076#2300#0" expanded="false" />
-            <element signature="e#2328#2488#0" expanded="false" />
-            <element signature="e#2516#2673#0" expanded="false" />
-            <element signature="e#2704#2846#0" expanded="false" />
-            <element signature="e#2988#3280#0" expanded="false" />
-            <element signature="e#3934#4079#0" expanded="false" />
-            <element signature="e#4135#4310#0" expanded="false" />
+            <element signature="e#2327#2487#0" expanded="false" />
+            <element signature="e#2515#2672#0" expanded="false" />
+            <element signature="e#3974#4119#0" expanded="false" />
+            <element signature="e#4175#4350#0" expanded="false" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#ul#0;n#div#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
