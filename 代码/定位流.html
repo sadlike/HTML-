@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位流</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background-color: red;
+        }
+        .box2{
+            background-color: green;
+            /*相对定位*/
+            position:  relative;
+            top:20px;
+            left:20px ;
+        }
+        .box3{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<!--1、定位流分类
+  1.1相对定位
+  1.2绝对定位
+  1.3固定定位
+  1.4静态定位
+ 2。什么是相对定位
+  相对定位就是相对于自己以前在标准流中的位置来移动的
+ 3 、相对定位注意点
+ 3.1相对定位是不脱离标准流的，会继续在标准流中占用一份控件
+-->
+<div class="box1">
+</div>
+<div class="box2">
+</div>
+<div class="box3"></div>
+</body>
+</html>
