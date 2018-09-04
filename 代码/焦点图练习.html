@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        .focus {
+           width: 520px;
+            height: 280px;
+            border: 2px solid yellow;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+
+        }
+        .focus img{
+            width: 520px;
+            height: 280px;
+        }
+        span{
+            width: 40px;
+            /*height: 80px;*/
+            background-color: rgba(0,0,0,0.3);
+            font-size: 40px;
+            display: block;
+            margin-top: 10px;
+            color: white;
+            text-align: center;
+            line-height: 80px;
+
+        }
+        div .leftArrow{
+            position: absolute;
+            left: 0px;
+            top: 100px;
+
+        }
+        div .rightArrow{
+            position: absolute;
+            right: 0px;
+            top: 100px;
+        }
+        ol{
+            list-style: none;
+            width: 200px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.7);
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+        }
+        ol li {
+            float: left;
+            width: 40px;
+            border: 1px solid red;
+            box-sizing: border-box;
+            text-align: center;
+            line-height: 40px;
+
+
+        }
+        .fixation {
+            width: 200px;
+            height: 20000px;
+            border: 1px solid black;
+            background-image: url("images/hui_contentA_img.png");
+            background-repeat:no-repeat;
+            background-attachment: fixed;
+        }
+         
+
+    </style>
+</head>
+<body>
+<div class="focus">
+    <img src="images/cai_contentA_img.png" alt="">
+    <span class="leftArrow">&lt;</span>
+    <span class="rightArrow">&gt;</span>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+
+    </ol>
+</div>
+<hr>
+<hr>
+<br>
+<!--
+ 固定定位
+   固定定位和背景关联方式很像，背景定位可以让背景图片不随着滚动条的滚动而滚动
+   而固定定位可以让某个盒子不随着滚动条的滚动而滚动
+注意点
+1、固定定位的元素是脱离标准流的，不会占用标准流中的空间
+2、固定定位和绝对定位一样，不区分行内/块级/行内块级元素
+-->
+
+<div class="fixation">
+ 
+</div>
+</body>
+</html>
