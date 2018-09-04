@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子绝父相练习</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       ul{
+         list-style: none;
+           width: 800px;
+           height: 50px;
+           margin:0 auto;
+           margin-top: 100px;
+           background-color: #333333;
+        }
+        ul li{
+            float: left;
+            width: 100px;
+            line-height: 50px;
+            background-color: #cccccc;
+            text-align: center;
+            position: relative;
+        }
+        /*序选择器*/
+        ul li:nth-of-type(4){
+            background-color: yellow;
+        }
+        ul li img {
+            /*
+            相对定位弊端
+             相对定位不会脱离标准流，会继续再标准流中占用一份控件，所以不易于布局局面
+            */
+            /*
+            position:  relative;
+            left: -42px;
+            top: -18px;
+            */
+
+            /*绝对定位弊端
+            默认情况下绝对定位的元素会以body作为参考点，所以会随着浏览器的宽度高度的变化而变化
+            */
+            /*
+            position: absolute;
+            left:635px;
+            top: 90px;
+            */
+
+            /*
+            子绝父相
+            子元素 用绝对定位， 父元素用相对定位
+            */
+
+            position: absolute;
+            /*left: 40px;*/
+            top: -10px;
+            left: 50%;
+            margin-left: -13px;
+        }
+
+        div{
+            /*width: 100%;*/
+
+            width: 150px;
+            height: 50px;
+            background-color: red;
+            /*margin:0 auto;*/
+            position: absolute;
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+<ul>
+    <li>服装城</li>
+    <li>美妆馆</li>
+    <li>京东超市</li>
+    <li>全球购
+        <img src="images/selecton_icon@2x.png" alt="">
+    </li>
+    <li>闪购</li>
+    <li>团购</li>
+    <li>拍卖</li>
+    <li>金融</li>
+
+
+
+</ul>
+
+<hr>
+
+<hr>
+<div>
+
+</div>
+<!--
+如何让绝对定位的元素水平居中
+只需要设置绝对低多功能为的元素的left：50%
+然后再设置绝对定位元素的margin-left：-元素宽度的一半px
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
