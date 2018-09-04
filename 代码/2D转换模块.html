@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D转换模块</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        .animation{
+            width: 800px;
+            height: 500px;
+            border: 1px dashed slateblue ;
+            margin: 0 auto;
+        }
+        .animation li{
+            list-style:none;
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .animation li:nth-child(2){
+            /*deg 是单位 多少度*/
+            transform: rotate(45deg);
+        }
+        .animation li:nth-child(3){
+            /*
+             第一个参数 水平方向
+             第二个参数 垂直方向
+            */
+            transform: translate(-100px,50px);
+        }
+        .animation li:nth-child(4){
+            /*
+               第一个参数 水平方向
+               第二个参数 垂直方向
+
+              注意点
+              如果取值是，代表不变
+              大于1  放大
+              小于1  缩小
+              如果水平和垂直缩放都一样，那么可以简写为一个参数
+            */
+            transform: scale(0.5,1.5);
+        }
+        .animation li:nth-child(5){
+            /*
+            注意点
+
+            1、如果需要多个转换，那么需要用空格隔开
+            2、2D的转换模块会修改元素的坐标器，所以旋转之后再评议就不是水平平移的
+            */
+            transform: rotate(45deg) scale(0.5,1.5) ;
+        }
+        .shape {
+            width: 200px;
+            height: 200px;
+            border: 1px solid firebrick;
+            margin: 100px auto;
+
+        }
+        .shape li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            float: left;
+            position: absolute;
+            /*
+            第一个参数 水平方向
+            第二个参数 垂直方向
+            注意点
+            取值有三种方式
+            1、具体像素 transform-origin: 0px 0px;
+            2、百分比 transform-origin: 50% 50%;
+            3、特殊关键字       transform-origin: left center;
+
+            */
+            transform-origin: left center;
+
+        }
+        .shape li:nth-child(1){
+            /*
+            默认情况下所有的元素都是以自己的中心点作为参考来旋转的，我们可以通过形变中心点属性来修改它的参考点
+            */
+            background-color: red;
+            transform: rotate(30deg);
+        }
+        .shape li:nth-child(2){
+            background-color: green;
+            transform: rotate(50deg);
+        }
+        .shape li:nth-child(3){
+            background-color: blue;
+            transform: rotate(70deg);
+        }
+
+        /*旋转轴向*/
+        .transform{
+            width: 800px;
+            height: 600px;
+            border: 1px solid firebrick;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .transform li{
+            list-style: none;
+            width: 200px;
+            height: 150px;
+            margin: 0 auto;
+            margin-top: 20px;
+            border: 1px solid black;
+            overflow: hidden;
+        }
+        .transform li img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<ul class="animation">
+    <li>正常的</li>
+    <li>旋转的</li>
+    <li>平移的</li>
+    <li>缩放的</li>
+    <li>综合的</li>
+</ul>
+<!--形变-->
+<ul class="shape">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<!--旋转轴向-->
+<ul class="transform">
+    <li>
+        <img src="images/hui_contentA_img.png" alt="">
+    </li>
+    <li> <img src="images/hui_contentA_img.png" alt=""></li>
+    <li> <img src="images/hui_contentA_img.png" alt=""></li>
+</ul>
+</body>
+</html>

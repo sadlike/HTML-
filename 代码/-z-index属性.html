@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>-z-index属性</title>
+    <style>
+        a{
+            /*简写格式*/
+            color:  green;
+        }
+        /*
+        a:link{
+            color: tomato;//green
+        }
+        a:visited{
+            color: green;
+        }
+        */
+        a:hover{
+            color: orange;
+        }
+        a:active{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+1、什么是z-index属性
+默认情况下所有的元素都有一个默认的z-index 属性
+z-index属性的作用是专门控制定位流元素的覆盖关系的
+
+
+ 1、默认情况下定位流的元素会盖住标准流的元素
+ 2、默认情况下定位流的元素后面编写的会盖住前面编写的
+ 3、如果低多功能为刘的元素设置了z-index属性，那么谁的z-index属性比较大，谁就显示在上面
+
+
+ 注意点
+ 1、从父现象
+  1、1如果两个元素的父元素都没有设置z-index属性，那么谁的z-index属性比较大，谁就显示在上面
+  2、1如果两个圆的父元素设置了z-index属性，那么子元素的z-index属性就会失效，也就是说谁的父元素的z-index比较大
+  ，谁就会显示在上面
+-->
+
+<!--
+1、 a标签存在一定状态
+ 1.1 默认状态 从未被访问过
+ 1.2 被访问过样式
+ 1.3 鼠标长按样式
+ 1.4 鼠标悬停在标签上的样式
+2、什么是a标签的伪类选择器？
+a标签的伪类选择器是专门用来修改a标签不同状态的样式的
+3。格式
+:link 修改从未被访问过状态下的样式
+:visited 修改被访问过状态下的样式
+:active 修改鼠标长按状态下的样式
+:hover 修改鼠标悬停状态下的样式
+
+4、注意点
+ 4.1 a标签的伪类选择器可以单独出现，也可以一起出现
+ 4.2 a标签的伪类选择器如果一起出现，那么有严格的顺序要求
+    编写的顺序 必须要遵守爱恨原则love hate
+ 4.3 如果默认状态的样式和被访问过的样式一样，那么可以缩写
+
+
+-->
+<a href="https://www.taobao.com">taobao</a>
+<a href="https://www.jd.com">jd</a>
+</body>
+</html>

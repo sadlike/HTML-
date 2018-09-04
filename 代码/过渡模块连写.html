@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过渡模块连写</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        .write {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+
+            /*
+             告诉系统哪个属性需要执行过渡效果
+               */
+            /*transition-property: width,background-color;*/
+            /*告诉系统过渡效果的时长*/
+            /*transition-duration: 5s,5s;*/
+            /*告诉系统延迟多少秒之后才开始动画*/
+            /*transition-delay: 2s;*/
+
+
+            /*连写格式*/
+
+
+            /*transition: width 5s linear 0s,background-color 5s linear 0s;*/
+            transition: width 5s,background-color 5s,height 5s;
+            /*transition: all 5s;*/
+        }
+        /*
+         :hover 这个伪类选择器除了可以用在a标签上，还可以用在其他的任何标签上
+         */
+        .write:hover{
+            width: 300px;
+            background-color: blue;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+<!--
+1、过渡连写格式
+ transition：过渡属性 过渡时长 运动速度 延迟时间
+2、过渡连写注意点
+ 2.1 和分开写一样，如果想给多个属性添加过渡效果也是用逗号隔开即可
+ 2.2 连写的时候可以省略后面的两个参数，因为只要写了前面的两个元素，就已经满足了过渡的三要素
+ 2.3 如果多个属性运动的速度/延迟的时间/持续的时间都一样，那么可以简写为 transition：all 0s
+-->
+<div class="write">
+
+</div>
+</body>
+</html>
