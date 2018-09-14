@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D转换模块</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 100px auto;
+            position: relative;
+            transform: rotateY(0deg) rotateX(0deg);
+            transform-style: preserve-3d;
+
+        }
+        ul li {
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            font-size: 60px;
+            text-align: center;
+            line-height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        /*左右*/
+        ul li:nth-child(1){
+            background-color: red;
+            transform: translateX(-100px) rotateY(90deg);
+        }
+        ul li:nth-child(2){
+            background-color: blue;
+            transform: translateX(100px) rotateY(90deg);
+        }
+        /*上下*/
+        ul li:nth-child(3){
+            background-color: slateblue;
+            transform: translateY(-100px) rotateX(90deg);
+        }
+        ul li:nth-child(4){
+            background-color: green;
+            transform: translateY(-100px) rotateX(-90deg);
+        }
+        ul li:nth-child(5){
+            background-color: magenta;
+            transform: translateZ(-100px);
+        }
+        ul li:nth-child(6){
+            background-color: brown;
+            transform: translateZ(100px);
+        }
+
+    </style>
+</head>
+<body>
+<!--
+1、什么是2D 和3d
+ 2D就是一个平面，只有宽度和高度 没有厚度
+ 3D就是一个离体，有宽度和高度还有厚度
+ 默认情况下所有的元素都是2d展现的
+
+ 2、如何让某个元素呈现3d展现
+
+  和透视一样，想看到某个元素的3d效果，只需要给他的父元素添加一个transform-style属性
+  然后设置为preserve-3d即可
+
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+</body>
+</html>

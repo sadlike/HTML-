@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画无限滚动</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        div{
+            width: 600px;
+            height: 188px;
+            border: 1px solid black;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        ul{
+            width: 2000px;
+            height: 188px;
+            background-color: black;
+            animation: move 10s linear 0s infinite normal;
+        }
+        ul li{
+            float: left;
+            list-style: none;
+            width: 300px;
+            height: 188px;
+            background-color: red;
+            border: 1px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        /*暂停*/
+        ul:hover{
+            animation-play-state: paused;
+        }
+        /*透明度阴影*/
+        ul:hover li{
+            opacity: 0.5;
+        }
+        ul li:hover{
+            opacity: 1;
+        }
+        @keyframes move {
+            from{
+               margin-left: 0px;
+            }
+            to{
+                margin-left: -900px;
+            }
+        }
+        /*
+        ul{
+            width: 600px;
+            height: 188px;
+            border: 1px solid black;
+            margin: 100px auto;
+        }
+        ul li{
+            float: left;
+            list-style: none;
+            width: 300px;
+            height: 188px;
+            background-color: red;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }*/
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="images/hui_contentA_img.png" alt=""></li>
+        <li><img src="images/cai_contentA_img.png" alt=""></li>
+        <li><img src="images/hui_contentC_img.png" alt=""></li>
+        <li><img src="images/hui_contentA_img.png" alt=""></li>
+        <li><img src="images/cai_contentA_img.png" alt=""></li>
+    </ul>
+</div>
+
+</body>
+</html>

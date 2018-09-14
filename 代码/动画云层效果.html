@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画云层效果</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            height: 100px;
+            margin-top: 100px;
+            background-color: skyblue;
+            animation: change 5s linear 0s infinite alternate;/*infinite 无线循环 alternate 交替*/
+            overflow: hidden;
+        }
+        ul li{
+            height:100%;
+            width: 400%;
+            position: absolute;
+            left: 0;
+            right: 0;
+            list-style: none;
+
+        }
+        ul li:nth-child(1){
+            background-image: url("images/a.jpg");
+
+            animation: one 30s linear 0s infinite alternate;
+        }
+        ul li:nth-child(2){
+            background-image: url("images/b.jpg");
+            animation: two 30s linear 0s infinite alternate;
+        }
+        ul li:nth-child(3){
+            background-image: url("images/hui_contentA_img.png");
+
+            animation: three 30s linear 0s infinite alternate;
+        }
+        @keyframes change {
+            from{
+                background-color: skyblue;
+            }to{
+                background-color: black;
+            }
+        }
+        @keyframes one {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -100%;
+            }
+        }
+        @keyframes two {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -200%;
+            }
+        }
+        @keyframes three {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -300%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div>
+<ul>
+    <li>
+        <!--<img src="images/a.jpg" alt="">-->
+    </li>
+    <li>
+        <!--<img src="images/b.jpg" alt="">-->
+    </li>
+    <li>
+        <!--<img src="images/hui_contentA_img.png" alt="">-->
+    </li>
+
+</ul>
+</div>
+</body>
+</html>
