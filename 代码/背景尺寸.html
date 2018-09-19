@@ -26,8 +26,22 @@
 
         }
         ul li:nth-child(1){
-            background: url("images/camera_icon@2x.png") no-repeat;
+            /*background: url("images/camera_icon@2x.png") no-repeat;*/
+
+            /*
+           多张背景图片之间用逗号隔开即可
+           注意点
+           先添加的图片会覆盖后添加的背景图片
+
+           建议在编写多重背景图片时拆开编写
+           */
+            /*background: url("images/selecton_icon@3x.png") no-repeat left top,*/
+            /*url("images/camera_icon@2x.png") no-repeat right top;*/
+            background-image: url("images/selecton_icon@3x.png"),url("images/camera_icon@2x.png");
+            background-repeat: no-repeat,no-repeat;
+            background-position: left top,right top;
         }
+
         ul li:nth-child(2){
             background: url("images/camera_icon@2x.png") no-repeat;
             /*
@@ -74,6 +88,7 @@
             1、告诉系统图片需要等比拉伸
             2、告诉系统图片需要拉伸到宽度或高度都填满元素
             */
+
             background-size:contain;
         }
     </style>
@@ -91,6 +106,10 @@
     <li>高度等比拉伸</li>
     <li>cover</li>
     <li>contain</li>
+
+
+
+
 
 </ul>
 </body>
