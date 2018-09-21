@@ -20,6 +20,8 @@
     <h1>Events</h1>
     <!--<button v-on:click="age++">涨一岁</button>-->
     <!--<button v-on:click="age&#45;&#45;">减一岁</button>-->
+    <!--只有一次起作用-->
+    <!--<button @click.once="add(1)">涨一岁</button>-->
     <button @click="add(1)">涨一岁</button>
     <button v-on:click="subtract(1)">减一岁</button>
 <!--双击事件-->
@@ -29,11 +31,47 @@
     <p>My age is {{age}}</p>
 
       <div id="canvas" v-on:mousemove="updateXY">
-          {{x}},{{y}}
+          {{x}},{{y}} -
+          <!--停止事件-->
+          <span v-on:mousemove.stop=""> stopMoving </span>
+          <!--<span v-on:mousemove="stopMoving"> stopMoving </span>-->
       </div>
+    <!--.prevent 阻止默认事件修饰符
+        .stop  停止事件
+        .once 只起一次作用
+    -->
+    <a v-on:click.prevent="alert()" href="http://www.baidu.com"> 百度</a>
+
+<!--.enter   ：按enter键才起作用
+     .alt.enter  :按两个键才起作用
+  -->
+    <h1>键盘Event</h1>
+    <label>姓名:</label>
+    <input type="text" @keyup.enter="logName">
+    <label>年龄:</label>
+    <input type="text" @keyup="logAge">
+
+
+    <h1>双向数据绑定/input /select /textarea</h1>
+    <label>姓名:</label>
+    <input ref="iname"  type="text" @keyup="logName">
+    <span>{{inputName}} </span>
+    <label>年龄:</label>
+    <input ref="iage" type="text" @keyup="logAge">
+    <span>{{inputAge}}</span>
+
+<!--v-model="要绑定的属性"-->
+    <label>vmode姓名:</label>
+    <input ref="iname"  type="text" v-model="inputName">
+    <span>{{inputName}} </span>
+    <label>vmode年龄:</label>
+    <input ref="iage" type="text" v-model="inputAge">
+    <span>{{inputAge}}</span>
+    <br>
+    <br>
+    <br>
 
 </div>
-
 <script src ="app.js"></script>
 </body>
 </html>

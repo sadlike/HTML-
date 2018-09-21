@@ -12,6 +12,8 @@ new Vue({
         websiteTag:"<a href='http://www.taobao.com'>淘宝</a>>",
         x:0,
         y:0,
+        inputName:"",
+        inputAge:"",
     },
     methods:{
         greet:function (time) {
@@ -28,7 +30,21 @@ new Vue({
             // console.log(event);
             this.x = event.offsetX;
             this.y = event.offsetY;
-        }
+        },
+        stopMoving:function () {
+            event.stopPropagation();
+        },
+        alert:function () {
+            alert('Hello Word');
+        },
+        logName:function () {
+            // console.log("姓名");
+            this.inputName = this.$refs.iname.value;
+        },
+        logAge:function () {
+            // console.log("年龄");
+            this.inputAge = this.$refs.iage.value;
+        },
     }
 
 });
