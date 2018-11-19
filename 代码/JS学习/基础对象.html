@@ -5,17 +5,37 @@
     <title>Title</title>
 </head>
 <body>
-<script>
-    /*
-    * 属性和方法
-    * */
-    var dog={
-     //属性
-        name:"旺财",
-        age:12,
-    };
-    console.log(typeof dog);
+<!--<script type="text/html">-->
+    <!--var dog={-->
+     <!--//属性-->
+        <!--name:"旺财",-->
+        <!--age:12,-->
+    <!--};-->
+    <!--console.log(typeof dog);-->
+    <!--function Person() {-->
+        <!--var obj = new Object();-->
+        <!--return obj;-->
+    <!--}-->
+    <!--var p = Person();-->
+    <!--console.log(p);-->
 
+<!--</script>-->
+<script>
+    function Dog(option) {
+        this.name= option.name;
+        this.age = option.age;
+        this.dogFriends = option.dogFriends;
+        this.eat = function (someThing) {
+            console.log(this.name + "在吃"+someThing);
+        }
+    }
+    var smallDog = new Dog({name:"小花",age:1});
+    smallDog.age=10;
+    console.log(smallDog);
+    smallDog.eat('奶');
+
+    var bigDog = new Dog({name:"大话",age:10,dogFriends:["dada","xx"]});
+    console.log(bigDog);
 
 </script>
 </body>
