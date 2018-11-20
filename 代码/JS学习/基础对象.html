@@ -20,7 +20,7 @@
     <!--console.log(p);-->
 
 <!--</script>-->
-<script>
+<script type="text/html">
     function Dog(option) {
         this.name= option.name;
         this.age = option.age;
@@ -37,6 +37,39 @@
     var bigDog = new Dog({name:"大话",age:10,dogFriends:["dada","xx"]});
     console.log(bigDog);
 
+</script>
+<script>
+    /*构造函数*/
+    function Dog(option) {
+//        this.name= option.name;
+//        this.age = option.age;
+//        this.dogFriends = option.dogFriends;
+         this._init(option);
+    }
+    Dog.prototype = {
+        //属性
+        _init :function (option) {
+            this.name= option.name;
+            this.age = option.age;
+            this.dogFriends = option.dogFriends;
+
+        },
+        eat :function (someThing) {
+            console.log(this.name + '在吃' +someThing);
+        },
+        run :function (someWhere) {
+            console.log(this.name + '在跑' +someWhere);
+        }
+    }
+    var smallDog = new Dog({name:"小花",age:1});
+    smallDog.age=10;
+    console.log(smallDog);
+    smallDog.eat("奶");
+    smallDog.run("青浦区");
+
+
+    var bigDog = new Dog({name:"大话",age:10,dogFriends:["dada","xx"]});
+    console.log(bigDog);
 </script>
 </body>
 </html>
