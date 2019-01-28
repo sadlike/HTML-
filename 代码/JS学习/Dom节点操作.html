@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom节点操作</title>
+    <style>
+        #box {
+            width: 600px;
+            height: 600px;
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+<div id="box">
+    <p>hahhahah</p>
+    <button>点我</button>
+    <!--<button class="btn">按钮</button>-->
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--<span id="span">-->
+         <!--<a href="#">百度一下</a>-->
+     <!--</span>-->
+    <!--&lt;!&ndash;&ndash;&gt;-->
+    <!--<p class="mm">我是mm</p>-->
+    <!--<div>哈哈哈哈</div>-->
+</div>
+
+<script>
+    
+    window.onload = function () {
+        //crud 增删改查
+//        1、创建节点
+        var box = document.getElementById("box");
+        var img = document.createElement("img");
+        img.src = "images/a.jpg";
+
+        box.appendChild(img);//插入最后
+        var btn = document.getElementsByTagName("button")[0];
+        box.insertBefore(img,btn);//插入在按钮的前面
+    }
+
+</script>
+
+</body>
+</html>
