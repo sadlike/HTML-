@@ -163,13 +163,207 @@ setInterval(function () {
 console.log(fn(10,20,add));
 
 </script>
-<script>
+<script type = "text/html">
 
     var num =5;
     if(num>3){
     var sum  = 7;
-    }
+    };
     console.log(sum);
+
+    // function foo(str) {
+    //     'use strict';
+    //     eval(str);
+    //     console.log('输出'+i);
+    // }
+    // foo('var i = 2');
+
+    var  a = 2;
+    //立即执行函数表达式
+    (function feo() {
+        var a = 3;
+        console.log('方法内'+ a );
+    })();
+
+    console.log('方法外'+a);
+
+    (function IIFE(def) {
+        console.log('abc');
+         window.a = 9;
+         def( window );
+        console.log('abcccccc');
+    })(function def(global) {
+        var a = 3;
+        console.log( a );
+        console.log( global.a );
+    });
+
+    //let 可以将变量绑定到所在的任意作用域中
+    var  fmethod = true;
+    if (fmethod){
+
+        let  bar = fmethod *2;
+        console.log('作用域内'+bar);
+    }
+    {
+        let  bar = fmethod *2;
+        console.log('22222作用域内----'+bar);
+    }
+    // console.log('作用域外'+bar);
+
+    w = 2;
+    var  w;
+    console.log('w==='+w);
+
+    function CoolModule() {
+        var something = 'cool';
+        var another = [1,2,3];
+        function doSomething() {
+            console.log(something);
+        }
+        function doAnother() {
+            console.log( another.join('!'));
+        }
+        return{
+            doSomething:doSomething,
+            doAnother:doAnother
+        }
+    }
+    var ff = CoolModule();
+    ff.doSomething();
+    ff.doAnother();
+
+
+    function fmm() {
+        console.log(pp);
+    }
+    function fbar() {
+        var  pp = 4;
+        fmm();
+    }
+    var  pp = 9;
+    fbar();
+
+    function identify() {
+        return  this.name.toUpperCase();
+    }
+    function speak() {
+        var  greeting = 'Hello,I`m'+identify.call(this);
+        console.log(greeting);
+    }
+    var  me ={
+        name:'Kyle'
+    }
+    var you = {
+        name:'Reader'
+    }
+    identify.call(me);
+    identify.call(you);
+
+    speak.call(me);
+    speak.call(you);
+
+    function ffoo() {
+        console.log('输出---'+this.jk);
+    }
+    var  jk = 2;
+
+    // ffoo();
+    (function () {
+
+        "use strict";//使用严格模式
+        ffoo();
+    })();
+
+
+</script>
+<script>
+    function foo() {
+        console.log(this.a);
+    }
+    var obj = {
+        a : 3,
+        foo:foo
+    };
+    obj.foo();
+
+    var  obje ={
+        a :94
+    }
+    //通过foo。call (...),我们可以再调用foo的时候强制把它的this绑定到obje上
+    foo.call(obje);
+
+    function ffed(something) {
+        console.log( this.a, something);
+        return this.a + something;
+    }
+    var bar = ffed.bind(obje);
+    var b = bar(3);
+    console.log('bin++++'+b);
+
+    //new 绑定
+     function fm(aa) {
+         this.aa = aa
+     }
+     var bar = new fm(3);
+     console.log(bar.aa);
+
+     //显式绑定比隐式绑定优先级更高
+    var obje1 ={
+      a:90,
+      foo:foo
+    };
+    var obje2 = {
+        a:99,
+        foo:foo
+    };
+    obje1.foo();
+    obje2.foo();
+    obje1.foo.call(obje2);
+    obje2.foo.call(obje1);
+     //new 绑定 比 隐式绑定优先级 高
+
+    function fmmf(something) {
+        this.a = something;
+    }
+    var obj1 ={
+        foo:fmmf
+    }
+    var obj2 = {};
+    obj1.foo(2);
+    console.log(obj1.a);
+
+    obj1.foo.call(obj2,3);
+    console.log(obj2.a);
+
+    var bars=  new obj1.foo(4);
+    console.log(obj1.a);
+    console.log(bars.a);
+
+    //判断this
+    /*
+     1、函数是否在new中调用（new 绑定）？如果是的话this绑定的是新创建的对象
+     var bar = new foo()
+     2、函数是否通过call、apply(显式绑定)或者硬绑定调用？如果是的话，this绑定的是指定的对象
+     var bar = foo.call(obj2)
+     3、函数是否在某个上下文对象中调用（隐式绑定）？如果是的话，this绑定的是哪个上下文对象
+     var bar = obje1.foo（）
+     4、如果都不是的话，使用默认绑定。 如果在严格模式下，就绑定到undefined 否则就绑定到全局、
+     var bar= foo（）
+
+    */
+
+    function fooM(a,b) {
+        console.log('a:' + a +",b:"+b );
+    }
+    //我们的DMZ空对象
+    var nuObject = Object.create(null);
+    //把数组展开成参数
+    fooM.apply(nuObject,[2,3]);
+    //使用bind（）进行柯力化
+    var babbb = fooM.bind(nuObject,2);
+    babbb(3);
+
 </script>
 </body>
 </html>

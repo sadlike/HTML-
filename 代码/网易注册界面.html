@@ -3,6 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <title>网易注册界面</title>
+
+
+        <script type="application/javascript">
+            //相互通信只能传递字符串类型
+            function clicktorn() { //发送消息到rn
+                let params = {
+                    msg:'h5传给了原生',
+                    url:'http:?/wwsadfa'
+                };
+                // alert('h5传递给原生的参数'+JSON.stringify(params))
+                window.postMessage(JSON.stringify(params));
+            }
+
+            window.document.addEventListener('message', function(e) {//注册事件 接收数据
+                const message = e.data;//字符串类型
+                alert('WebView message:'+message)
+            })
+        </script>
+
+
         <style>
             /*1、清空默认边距*/
             body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
@@ -311,7 +331,7 @@
                         <a href="#">"隐私权相关政策"</a>
                     </p>
 
-                    <input type="submit" value="立即注册">
+                    <input type="submit" value="立即注册"onclick=clicktorn()>
 
                 </div>
             </div>
@@ -319,9 +339,9 @@
 
              <img src="http://mimg.127.net/xm/reg_all/img/reg_master.gif" alt="">
 
-
          </div>
         </div>
+        <button onclick=clicktorn()>单击</button>
     </div>
      <!--内容结束-->
     <!--底部开始-->
