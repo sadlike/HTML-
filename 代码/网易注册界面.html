@@ -12,14 +12,26 @@
                     msg:'h5传给了原生',
                     url:'http:?/wwsadfa'
                 };
+
                 // alert('h5传递给原生的参数'+JSON.stringify(params))
                 window.postMessage(JSON.stringify(params));
             }
 
+            alert ('*******'+window.navigator.userAgent);
+
             window.document.addEventListener('message', function(e) {//注册事件 接收数据
                 const message = e.data;//字符串类型
-                alert('WebView message:'+message)
+                alert('WebView message:'+e.data)
+
             })
+            var searchURL = window.location.search;
+
+            searchURL = searchURL.substring(1, searchURL.length);
+
+            var targetPageId = searchURL.split("&")[0].split("=")[1];
+
+
+
         </script>
 
 
