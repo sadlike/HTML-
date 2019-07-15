@@ -9,26 +9,28 @@
             //相互通信只能传递字符串类型
             function clicktorn() { //发送消息到rn
                 let params = {
-                    msg:'h5传给了原生',
-                    url:'http:?/wwsadfa'
+                    // msg:'h5传给了原生',
+                    // url:'http:?/wwsadfa'
+                    type:'getUserInfo'
                 };
 
                 // alert('h5传递给原生的参数'+JSON.stringify(params))
                 window.postMessage(JSON.stringify(params));
             }
 
-            alert ('*******'+window.navigator.userAgent);
+            // alert ('*******'+window.navigator.userAgent);
 
             window.document.addEventListener('message', function(e) {//注册事件 接收数据
                 const message = e.data;//字符串类型
                 alert('WebView message:'+e.data)
 
             })
-            var searchURL = window.location.search;
 
-            searchURL = searchURL.substring(1, searchURL.length);
-
-            var targetPageId = searchURL.split("&")[0].split("=")[1];
+            // var searchURL = window.location.search;
+            //
+            // searchURL = searchURL.substring(1, searchURL.length);
+            //
+            // var targetPageId = searchURL.split("&")[0].split("=")[1];
 
 
 
